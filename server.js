@@ -1,3 +1,5 @@
+// https://polar-lowlands-66788.herokuapp.com/
+
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
@@ -52,6 +54,12 @@ app.get('/about',(req,res) => {
 app.get('/bad',(req,res) => {
   res.send({
     errorMessage : 'Unable to handle request'
+  });
+});
+
+app.get('/projects',(req, res) =>{
+  res.render('projects.hbs',{
+    pageTitle : 'Projects Page'
   });
 });
 
